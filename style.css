@@ -1,0 +1,34 @@
+:root {
+  --bg: #f7f7fb; --surface: #ffffff; --text: #1d1f27; --muted: #5b6072; --accent: #5865f2; --border: #e3e5ee;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #16171d; --surface: #1f2029; --text: #e8e9ef; --muted: #a2a6b8; --accent: #8c96ff; --border: #2d2f3b; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+header, main, footer { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 20px; flex-wrap: wrap; }
+header a.brand { font-weight: 700; color: var(--text); text-decoration: none; font-size: 18px; }
+nav a { color: var(--muted); text-decoration: none; margin-left: 16px; }
+nav a:hover, nav a[aria-current] { color: var(--accent); }
+main { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px 28px; margin-top: 20px; width: calc(100% - 32px); }
+h1 { font-size: 28px; line-height: 1.25; margin: 0 0 4px; }
+h2 { font-size: 19px; margin: 28px 0 8px; }
+p, li { color: var(--text); }
+.muted { color: var(--muted); font-size: 14px; }
+a { color: var(--accent); }
+ul { padding-left: 22px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; }
+.table-wrap { overflow-x: auto; }
+.button { display: inline-block; background: var(--accent); color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; }
+.card { border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+.card strong { display: block; }
+footer { padding: 24px 16px 40px; text-align: center; }
+@media (max-width: 520px) { main { padding: 18px 16px; } h1 { font-size: 24px; } nav a { margin: 0 12px 0 0; } }
+[hidden] { display: none !important; }
