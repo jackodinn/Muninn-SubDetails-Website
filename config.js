@@ -3,7 +3,7 @@ window.SITE = {
   botName: 'Muninn',
   developer: 'Odin',
   contactEmail: 'jackodinn@gmail.com', // where people can ask for data deletion
-  applicationId: 'YOUR_APP_ID', // Developer Portal → General Information → Application ID
+  applicationId: '766474857352527912', // Developer Portal → General Information → Application ID
   effectiveDate: 'September 28, 2026',
 };
 
