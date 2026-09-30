@@ -4,27 +4,156 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Muninn · Discord bot</title>
+  <meta name="description" content="Muninn is a Discord bot with AI chat, 30 minigames, a Stockfish chess bot, levels, coins and moderation.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E🐦‍⬛%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap">
   <link rel="stylesheet" href="style.css">
   <script src="config.js"></script>
+  <script src="site.js" defer></script>
 </head>
 <body>
-  <header>
-    <a class="brand" href="index.html">🐦‍⬛ <span data-site="botName">Muninn</span></a>
-    <nav><a href="index.html" aria-current="page">Home</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></nav>
-  </header>
-  <main>
-    <h1><span data-site="botName">Muninn</span></h1>
-    <p class="muted">A Discord bot developed by <span data-site="developer">Odin</span> · powered by Google Gemini</p>
-    <p>Chat with AI, play 30+ minigames, level up, earn coins and keep your server tidy, all in one bot.</p>
-    <p><a class="button" id="invite" href="#">Add to Discord</a></p>
-    <div class="features">
-      <div class="card"><strong>🤖 AI chat</strong>Mention it, DM it, or send images, PDFs and voice messages.</div>
-      <div class="card"><strong>🎮 Games</strong>Wordle, chess, trivia, murder mysteries, impostor and more.</div>
-      <div class="card"><strong>📈 Levels &amp; coins</strong>XP, daily rewards, a shop, achievements and giveaways.</div>
-      <div class="card"><strong>🛡️ Moderation</strong>Automod, logs, warnings, verification and tickets.</div>
+  <header class="nav">
+    <div class="container">
+      <a class="brand" href="index.html"><span class="brand-mark">🐦‍⬛</span><span data-site="botName">Muninn</span></a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="#features">Features</a>
+        <a href="#games">Games</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <a class="btn" data-invite href="#">Add to Discord</a>
     </div>
-    <p style="margin-top:20px">Type <code>/help</code> in Discord to see every command.</p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="badge"><span class="dot"></span>Free · powered by Google Gemini</span>
+        <h1>Your server's <span class="gradient-text">AI companion</span></h1>
+        <p class="lead"><span data-site="botName">Muninn</span> chats, plays and keeps order. AI conversations, 30 minigames, a real chess engine, levels and coins, and moderation tools, all in one bot.</p>
+        <div class="hero-actions">
+          <a class="btn" data-invite href="#">➕ Add to Discord</a>
+          <a class="btn btn-ghost" href="#features">Explore features</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>28</strong><span>AI features</span></div>
+          <div class="stat"><strong>30</strong><span>minigames</span></div>
+          <div class="stat"><strong>5</strong><span>chess bot levels</span></div>
+          <div class="stat"><strong>100%</strong><span>free to use</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Features</span>
+          <h2>Everything your community needs</h2>
+          <p>Type <code>/help</code> in Discord to browse every command by category.</p>
+        </div>
+        <div class="features">
+          <article class="card feature reveal">
+            <div class="icon">🤖</div>
+            <h3>AI chat</h3>
+            <p>Mention or DM it to chat. It remembers the conversation and reads images, PDFs and voice messages. Give it a persona with <code>/persona</code>.</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="icon">🧠</div>
+            <h3>AI tools</h3>
+            <p><code>/summarize</code> long chats, <code>/translate</code>, <code>/search</code> the web with sources, <code>/review</code> code and transcribe voice messages.</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="icon">🎮</div>
+            <h3>Minigames</h3>
+            <p>Wordle, hangman, trivia, murder mysteries, AI RPGs, impostor, debates, Connect Four, 2048, blackjack and more.</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="icon">♟️</div>
+            <h3>Chess</h3>
+            <p>Challenge friends in rated games, or the Stockfish bot from Easy (~250) to Grandmaster (~2600). Move history and PGN export included.</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="icon">📈</div>
+            <h3>Levels &amp; economy</h3>
+            <p>XP and level roles, daily coins, a shop, achievements, giveaways and a <code>/profile</code> card with all your stats.</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="icon">🛡️</div>
+            <h3>Moderation</h3>
+            <p>Automod, optional AI moderation, logs, warnings, timeouts, verification, tickets and reaction roles.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="games">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Games</span>
+          <h2>Real game boards, right in Discord</h2>
+          <p>Boards are drawn as pictures on every move, so games look like the real thing.</p>
+        </div>
+        <div class="showcase">
+          <figure class="card shot wide reveal">
+            <img src="assets/chess.png" alt="A chess board in the middle of a game, with the last move highlighted" width="480" height="480" loading="lazy">
+            <figcaption><strong>♟️ Chess</strong><span>vs friends or Stockfish</span></figcaption>
+          </figure>
+          <figure class="card shot wide reveal">
+            <img src="assets/blackjack.png" alt="A blackjack table with the dealer's and player's cards" width="480" height="374" loading="lazy">
+            <figcaption><strong>🃏 Blackjack</strong><span>bet your coins</span></figcaption>
+          </figure>
+          <figure class="card shot reveal">
+            <img src="assets/wordle.png" alt="A Wordle board solved on the third guess" width="420" height="551" loading="lazy">
+            <figcaption><strong>🟩 Wordle</strong><span>daily &amp; practice</span></figcaption>
+          </figure>
+          <figure class="card shot reveal">
+            <img src="assets/connect4.png" alt="A Connect Four board with red and yellow discs" width="420" height="397" loading="lazy">
+            <figcaption><strong>🔴 Connect Four</strong><span>vs friends or the bot</span></figcaption>
+          </figure>
+          <figure class="card shot reveal">
+            <img src="assets/2048.png" alt="A 2048 board with tiles up to 2048" width="420" height="420" loading="lazy">
+            <figcaption><strong>🧮 2048</strong><span>chase the high score</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Get started</span>
+          <h2>Up and running in a minute</h2>
+        </div>
+        <div class="steps">
+          <div class="card step reveal"><h3>Add the bot</h3><p>Click <strong>Add to Discord</strong> and pick your server. You need the Manage Server permission.</p></div>
+          <div class="card step reveal"><h3>Say hi</h3><p>Mention <code>@<span data-site="botName">Muninn</span></code> in any channel, or use <code>/ask</code>.</p></div>
+          <div class="card step reveal"><h3>Explore</h3><p>Type <code>/help</code> for every command, and <code>/config</code> to set up welcome messages, logs and more.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="card cta reveal">
+          <h2>Bring <span class="gradient-text" data-site="botName">Muninn</span> to your server</h2>
+          <p>Free, and it takes seconds to set up.</p>
+          <div class="hero-actions">
+            <a class="btn" data-invite href="#">➕ Add to Discord</a>
+            <a class="btn btn-ghost" href="privacy.html">How we handle data</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="muted"><a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a></footer>
+
+  <footer>
+    <div class="container">
+      <p>© <span data-year>2026</span> <span data-site="botName">Muninn</span> · made by <span data-site="developer">Odin</span></p>
+      <nav aria-label="Footer"><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a><a data-mailto="link" href="#">Contact</a></nav>
+    </div>
+  </footer>
 </body>
 </html>

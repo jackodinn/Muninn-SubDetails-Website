@@ -4,70 +4,102 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy · Muninn</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E🐦‍⬛%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap">
   <link rel="stylesheet" href="style.css">
   <script src="config.js"></script>
+  <script src="site.js" defer></script>
 </head>
 <body>
-  <header>
-    <a class="brand" href="index.html">🐦‍⬛ <span data-site="botName">Muninn</span></a>
-    <nav><a href="index.html">Home</a><a href="terms.html">Terms</a><a href="privacy.html" aria-current="page">Privacy</a></nav>
-  </header>
-  <main>
-    <h1>Privacy Policy</h1>
-    <p class="muted">Effective <span data-site="effectiveDate">September 28, 2026</span></p>
-
-    <p>This policy explains what the Discord bot <strong><span data-site="botName">Muninn</span></strong>, developed by <span data-site="developer">Odin</span>, collects, why, and what you can do about it. We don't sell your data or use it for advertising.</p>
-
-    <h2>1. What the bot reads</h2>
-    <p>The bot can see messages in channels it has access to, but it only <em>processes</em> message content when:</p>
-    <ul>
-      <li>you mention it, reply to it, DM it, or use a command;</li>
-      <li>you write in a channel or thread where a server admin turned on auto-reply, or in a running game (for example word chain, counting, story, 20 Questions or a mystery thread);</li>
-      <li>a server admin enabled automod or AI moderation, which checks new messages in that server.</li>
-    </ul>
-
-    <h2>2. What the bot stores</h2>
-    <div class="table-wrap">
-      <table>
-        <tr><th>Data</th><th>Why</th><th>How long</th></tr>
-        <tr><td>Discord user, server and channel IDs</td><td>To link the data below to you and your server</td><td>As long as the related data</td></tr>
-        <tr><td>Recent AI chat messages (text and display name) per channel</td><td>So the AI remembers the conversation</td><td>Only the last ~20 messages per channel; cleared with <code>/reset</code></td></tr>
-        <tr><td>XP, level, message count, coins, daily streak, items, achievements, game stats</td><td>Levels, economy, leaderboards</td><td>Until deleted</td></tr>
-        <tr><td>Reminders and scheduled messages</td><td>To send them later</td><td>Reminders are deleted once sent</td></tr>
-        <tr><td>Birthday (month and day only)</td><td>Birthday announcements</td><td>Until you use <code>/birthday remove</code></td></tr>
-        <tr><td>Moderation warnings (reason, moderator)</td><td>Server moderation</td><td>Until a moderator clears them</td></tr>
-        <tr><td>Server settings, giveaway entries, ticket and starboard records</td><td>Those features</td><td>Until deleted</td></tr>
-      </table>
+  <header class="nav">
+    <div class="container">
+      <a class="brand" href="index.html"><span class="brand-mark">🐦‍⬛</span><span data-site="botName">Muninn</span></a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#games">Games</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+      </nav>
+      <a class="btn" data-invite href="#">Add to Discord</a>
     </div>
-    <p>Attachments you send to the AI (images, PDFs, audio, files) are downloaded temporarily and <strong>not stored</strong>; only a note of the file name is kept in the chat memory. Messages checked by automod are not stored unless they are posted to the server's log channel by the bot.</p>
+  </header>
 
-    <h2>3. Who else receives data</h2>
-    <ul>
-      <li><strong>Google (Gemini API):</strong> when you use AI features, your message text, attached files and recent chat history are sent to Google to generate a reply. When AI moderation is on, messages are sent to Google to be checked. Google processes this under the <a href="https://ai.google.dev/gemini-api/terms">Gemini API Terms</a>. On Google's free tier, <strong>Google may use this content to improve its products</strong>, and it may be reviewed by humans. Don't send personal or sensitive information to the AI.</li>
-      <li><strong>Server moderators:</strong> if a server has a log channel, the bot posts deleted and edited messages, joins and leaves, and moderation actions there.</li>
-      <li><strong>Public lookup services:</strong> <code>/weather</code> sends the city name to Open-Meteo, <code>/define</code> sends the word to dictionaryapi.dev, and <code>/wiki</code> sends your search to Wikipedia.</li>
-      <li><strong>Discord</strong> receives everything the bot posts, under <a href="https://discord.com/privacy">Discord's Privacy Policy</a>.</li>
-    </ul>
+  <main>
+    <section class="doc-hero">
+      <div class="container">
+        <span class="eyebrow">Legal</span>
+        <h1>Privacy Policy</h1>
+        <p>Effective <span data-site="effectiveDate">September 30, 2026</span></p>
+      </div>
+    </section>
+    <div class="container doc">
+      <aside class="card toc" aria-label="On this page"><strong>On this page</strong><ol></ol></aside>
+      <article class="card prose">
+        <p>This policy explains what the Discord bot <strong><span data-site="botName">Muninn</span></strong>, developed by <span data-site="developer">Odin</span>, collects, why, and what you can do about it. We don't sell your data or use it for advertising.</p>
 
-    <h2>4. Where it's stored</h2>
-    <p>Data is stored in a database on a server hosted by Google Cloud in the United States. Access is limited to the developer.</p>
+        <h2>1. What the bot reads</h2>
+        <p>The bot can see messages in channels it has access to, but it only <em>processes</em> message content when:</p>
+        <ul>
+          <li>you mention it, reply to it, DM it, or use a command;</li>
+          <li>you write in a channel or thread where a server admin turned on auto-reply, or in a running game (for example word chain, counting, story, 20 Questions or a mystery thread);</li>
+          <li>a server admin enabled automod or AI moderation, which checks new messages in that server.</li>
+        </ul>
 
-    <h2>5. Your choices</h2>
-    <ul>
-      <li>Use <code>/reset</code> to clear the AI's memory of a channel, and <code>/birthday remove</code> to delete your birthday.</li>
-      <li>To delete all your data, or all data for a server you own, email <a data-mailto href="#">your-email@example.com</a> with your Discord user ID (or server ID). We'll delete it within 30 days.</li>
-      <li>Server admins can turn off features like AI moderation, auto-reply and logging with <code>/config</code>, or remove the bot.</li>
-    </ul>
+        <h2>2. What the bot stores</h2>
+        <div class="table-wrap">
+          <table>
+            <tr><th>Data</th><th>Why</th><th>How long</th></tr>
+            <tr><td>Discord user, server and channel IDs</td><td>To link the data below to you and your server</td><td>As long as the related data</td></tr>
+            <tr><td>Recent AI chat messages (text and display name) per channel</td><td>So the AI remembers the conversation</td><td>Only the last ~20 messages per channel; cleared with <code>/reset</code></td></tr>
+            <tr><td>XP, level, message count, coins, daily streak, items, achievements, game stats</td><td>Levels, economy, leaderboards</td><td>Until deleted</td></tr>
+            <tr><td>Chess ratings (rating, rating confidence, peak, rated wins/losses/draws, chosen starting level)</td><td>Rated chess games, <code>/profile</code> and the chess leaderboard</td><td>Until deleted</td></tr>
+            <tr><td>Reminders and scheduled messages</td><td>To send them later</td><td>Reminders are deleted once sent</td></tr>
+            <tr><td>Birthday (month and day only)</td><td>Birthday announcements</td><td>Until you use <code>/birthday remove</code></td></tr>
+            <tr><td>Moderation warnings (reason, moderator)</td><td>Server moderation</td><td>Until a moderator clears them</td></tr>
+            <tr><td>Server settings, giveaway entries, ticket and starboard records</td><td>Those features</td><td>Until deleted</td></tr>
+          </table>
+        </div>
+        <p>Games against the chess bot are calculated on our own server by the Stockfish engine; no game data is sent anywhere for that.</p>
+        <p>Attachments you send to the AI (images, PDFs, audio, files) are downloaded temporarily and <strong>not stored</strong>; only a note of the file name is kept in the chat memory. Messages checked by automod are not stored unless they are posted to the server's log channel by the bot.</p>
 
-    <h2>6. Children</h2>
-    <p>The bot is not meant for anyone under Discord's minimum age, and we don't knowingly collect data from them.</p>
+        <h2>3. Who else receives data</h2>
+        <ul>
+          <li><strong>Google (Gemini API):</strong> when you use AI features, your message text, attached files and recent chat history are sent to Google to generate a reply. When AI moderation is on, messages are sent to Google to be checked. Google processes this under the <a href="https://ai.google.dev/gemini-api/terms">Gemini API Terms</a>. On Google's free tier, <strong>Google may use this content to improve its products</strong>, and it may be reviewed by humans. Don't send personal or sensitive information to the AI.</li>
+          <li><strong>Server moderators:</strong> if a server has a log channel, the bot posts deleted and edited messages, joins and leaves, and moderation actions there.</li>
+          <li><strong>Public lookup services:</strong> <code>/weather</code> sends the city name to Open-Meteo, <code>/define</code> sends the word to dictionaryapi.dev, and <code>/wiki</code> sends your search to Wikipedia.</li>
+          <li><strong>Discord</strong> receives everything the bot posts, under <a href="https://discord.com/privacy">Discord's Privacy Policy</a>.</li>
+        </ul>
 
-    <h2>7. Changes</h2>
-    <p>We may update this policy. The date at the top shows the latest version.</p>
+        <h2>4. Where it's stored</h2>
+        <p>Data is stored in a database on a server hosted by Google Cloud in the United States. Access is limited to the developer.</p>
 
-    <h2>8. Contact</h2>
-    <p>Email <a data-mailto href="#">your-email@example.com</a>. See also our <a href="terms.html">Terms of Service</a>.</p>
+        <h2>5. Your choices</h2>
+        <ul>
+          <li>Use <code>/reset</code> to clear the AI's memory of a channel, and <code>/birthday remove</code> to delete your birthday.</li>
+          <li>To delete all your data, or all data for a server you own, email <a data-mailto href="#">your-email@example.com</a> with your Discord user ID (or server ID). We'll delete it within 30 days.</li>
+          <li>Server admins can turn off features like AI moderation, auto-reply and logging with <code>/config</code>, or remove the bot.</li>
+        </ul>
+
+        <h2>6. Children</h2>
+        <p>The bot is not meant for anyone under Discord's minimum age, and we don't knowingly collect data from them.</p>
+
+        <h2>7. Changes</h2>
+        <p>We may update this policy. The date at the top shows the latest version.</p>
+
+        <h2>8. Contact</h2>
+        <p>Email <a data-mailto href="#">your-email@example.com</a>. See also our <a href="terms.html">Terms of Service</a>.</p>
+      </article>
+    </div>
   </main>
-  <footer class="muted"><a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a></footer>
+
+  <footer>
+    <div class="container">
+      <p>© <span data-year>2026</span> <span data-site="botName">Muninn</span> · made by <span data-site="developer">Odin</span></p>
+      <nav aria-label="Footer"><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a><a data-mailto="link" href="#">Contact</a></nav>
+    </div>
+  </footer>
 </body>
 </html>
