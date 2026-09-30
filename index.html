@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Muninn · Discord bot</title>
-  <meta name="description" content="Muninn is a Discord bot with AI chat, 30 minigames, a Stockfish chess bot, levels, coins and moderation.">
+  <meta name="description" content="AI chat, 30 minigames, a Stockfish chess bot, levels and moderation for your Discord server. Free.">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/brand/icon-192.png">
   <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
@@ -34,117 +34,229 @@
         <a href="index.html" aria-current="page">Home</a>
         <a href="#features">Features</a>
         <a href="#games">Games</a>
-        <a href="terms.html">Terms</a>
-        <a href="privacy.html">Privacy</a>
+        <a href="#chess">Chess</a>
+        <a href="#faq">FAQ</a>
       </nav>
-      <a class="btn" data-invite href="#">Add to Discord</a>
+      <a class="btn shine" data-invite href="#">Add to Discord</a>
     </div>
+    <span class="nav-progress" aria-hidden="true"></span>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container">
-        <img class="hero-logo" src="assets/brand/logo-512.webp" alt="Muninn logo: a purple M with raven wings" width="150" height="150">
+    <!-- Hero: drifting dot grid, glow blobs, word-by-word headline, rotating word, parallax badges -->
+    <section class="hero" data-parallax>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="blob blob-a" aria-hidden="true"></div>
+      <div class="blob blob-b" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-visual">
+          <img class="hero-logo" data-depth="0.4" src="assets/brand/logo-512.webp" alt="Muninn logo: a purple M with raven wings" width="150" height="150">
+          <div class="float-badge fb-1" data-depth="1.3" aria-hidden="true"><span class="fb-ic">♟️</span><span><b>Checkmate!</b><small>+60 🪙 vs Master bot</small></span></div>
+          <div class="float-badge fb-2" data-depth="-1.1" aria-hidden="true"><span class="fb-ic">🎉</span><span><b>Level 12 reached</b><small>+600 🪙</small></span></div>
+          <div class="float-badge fb-3" data-depth="0.9" aria-hidden="true"><span class="fb-ic">🟩</span><span><b>Wordle 3/6</b><small>RAVEN</small></span></div>
+        </div>
         <span class="badge"><span class="dot"></span>Free · powered by Google Gemini</span>
-        <h1>Your server's <span class="gradient-text">AI companion</span></h1>
+        <h1><span data-split>Your server's</span> <span class="rot"><span class="on">AI companion</span><span>game night</span><span>chess coach</span><span>hype crew</span><span>bouncer</span></span></h1>
         <p class="lead"><span data-site="botName">Muninn</span> chats, plays and keeps order. AI conversations, 30 minigames, a real chess engine, levels and coins, and moderation tools, all in one bot.</p>
         <div class="hero-actions">
-          <a class="btn" data-invite href="#">➕ Add to Discord</a>
-          <a class="btn btn-ghost" href="#features">Explore features</a>
+          <a class="btn shine btn-arrow" data-invite href="#">Add to Discord<span class="circ" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+          <a class="btn btn-ghost btn-fill" href="#features">Explore features</a>
         </div>
         <div class="stats">
-          <div class="stat"><strong>28</strong><span>AI features</span></div>
-          <div class="stat"><strong>30</strong><span>minigames</span></div>
-          <div class="stat"><strong>5</strong><span>chess bot levels</span></div>
-          <div class="stat"><strong>100%</strong><span>free to use</span></div>
+          <div class="stat reveal"><strong><span data-count="28">28</span></strong><span>AI features</span></div>
+          <div class="stat reveal" style="--d:80ms"><strong><span data-count="30">30</span></strong><span>minigames</span></div>
+          <div class="stat reveal" style="--d:160ms"><strong><span data-count="5">5</span></strong><span>chess bot levels</span></div>
+          <div class="stat reveal" style="--d:240ms"><strong><span data-count="100">100</span>%</strong><span>free to use</span></div>
         </div>
       </div>
     </section>
 
+    <!-- Features: tabs with a sliding indicator and a mock Discord chat -->
     <section id="features">
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow">Features</span>
-          <h2>Everything your community needs</h2>
-          <p>Type <code>/help</code> in Discord to browse every command by category.</p>
+          <h2>See it in action</h2>
+          <p>Pick a feature to see how it looks in your server.</p>
         </div>
-        <div class="features">
-          <article class="card feature reveal">
-            <div class="icon">🤖</div>
-            <h3>AI chat</h3>
-            <p>Mention or DM it to chat. It remembers the conversation and reads images, PDFs and voice messages. Give it a persona with <code>/persona</code>.</p>
-          </article>
-          <article class="card feature reveal">
-            <div class="icon">🧠</div>
-            <h3>AI tools</h3>
-            <p><code>/summarize</code> long chats, <code>/translate</code>, <code>/search</code> the web with sources, <code>/review</code> code and transcribe voice messages.</p>
-          </article>
-          <article class="card feature reveal">
-            <div class="icon">🎮</div>
-            <h3>Minigames</h3>
-            <p>Wordle, hangman, trivia, murder mysteries, AI RPGs, impostor, debates, Connect Four, 2048, blackjack and more.</p>
-          </article>
-          <article class="card feature reveal">
-            <div class="icon">♟️</div>
-            <h3>Chess</h3>
-            <p>Challenge friends in rated games, or the Stockfish bot from Easy (~250) to Grandmaster (~2600). Move history and PGN export included.</p>
-          </article>
-          <article class="card feature reveal">
-            <div class="icon">📈</div>
-            <h3>Levels &amp; economy</h3>
-            <p>XP and level roles, daily coins, a shop, achievements, giveaways and a <code>/profile</code> card with all your stats.</p>
-          </article>
-          <article class="card feature reveal">
-            <div class="icon">🛡️</div>
-            <h3>Moderation</h3>
-            <p>Automod, optional AI moderation, logs, warnings, timeouts, verification, tickets and reaction roles.</p>
-          </article>
+        <div class="tabs reveal">
+          <div class="tab-list" role="tablist" aria-label="Features">
+            <span class="tab-ind" aria-hidden="true"></span>
+            <button role="tab" aria-selected="true" aria-controls="tp-chat" id="t-chat"><span class="t-ic">🤖</span><span><b>AI chat</b><small>Mention it and talk</small></span></button>
+            <button role="tab" aria-selected="false" aria-controls="tp-tools" id="t-tools"><span class="t-ic">🧠</span><span><b>AI tools</b><small>Summaries, search, translate</small></span></button>
+            <button role="tab" aria-selected="false" aria-controls="tp-games" id="t-games"><span class="t-ic">🎮</span><span><b>Minigames</b><small>30 games to play</small></span></button>
+            <button role="tab" aria-selected="false" aria-controls="tp-levels" id="t-levels"><span class="t-ic">📈</span><span><b>Levels &amp; coins</b><small>XP, shop, achievements</small></span></button>
+            <button role="tab" aria-selected="false" aria-controls="tp-mod" id="t-mod"><span class="t-ic">🛡️</span><span><b>Moderation</b><small>Automod, logs, tickets</small></span></button>
+          </div>
+          <div class="tab-view card">
+            <div class="dc-bar" aria-hidden="true"><span class="dc-hash">#</span>general<span class="dc-dots"><i></i><i></i><i></i></span></div>
+
+            <div class="tab-panel" role="tabpanel" id="tp-chat" aria-labelledby="t-chat">
+              <div class="msg"><span class="av av-user">S</span><div><p class="who">Sam <time>Today at 20:14</time></p><p><span class="mention">@Muninn</span> give my D&amp;D group a name, we're all terrible at dice</p></div></div>
+              <div class="msg"><img class="av" src="assets/brand/icon-192.png" alt="" width="36" height="36"><div><p class="who">Muninn <span class="app">APP</span> <time>Today at 20:14</time></p><p>How about <b>The Critical Fumbles</b>? 🎲 Or <b>Natural Ones Anonymous</b>, for a group that's really embraced it.</p></div></div>
+              <ul class="panel-points"><li>Remembers the conversation per channel</li><li>Reads images, PDFs and voice messages</li><li>Give it a personality with <code>/persona</code></li></ul>
+            </div>
+
+            <div class="tab-panel" role="tabpanel" id="tp-tools" aria-labelledby="t-tools" hidden>
+              <div class="msg"><span class="av av-user">A</span><div><p class="who">Aisha <time>Today at 09:02</time></p><p class="cmd">/summarize messages: 80</p></div></div>
+              <div class="msg"><img class="av" src="assets/brand/icon-192.png" alt="" width="36" height="36"><div><p class="who">Muninn <span class="app">APP</span> <time>Today at 09:02</time></p>
+                <div class="embed"><b>📝 Summary of the last 80 messages</b><ul><li>Movie night moved to <b>Friday 9pm</b></li><li>Sam is bringing snacks, Jay is picking the film</li><li>Still undecided: horror or comedy</li></ul></div></div></div>
+              <ul class="panel-points"><li><code>/search</code> answers with live Google results and sources</li><li><code>/translate</code> and right-click → Translate to English</li><li>Transcribe voice messages, review code</li></ul>
+            </div>
+
+            <div class="tab-panel" role="tabpanel" id="tp-games" aria-labelledby="t-games" hidden>
+              <div class="msg"><span class="av av-user">J</span><div><p class="who">Jay <time>Today at 22:40</time></p><p class="cmd">/trivia topic: space</p></div></div>
+              <div class="msg"><img class="av" src="assets/brand/icon-192.png" alt="" width="36" height="36"><div><p class="who">Muninn <span class="app">APP</span> <time>Today at 22:40</time></p>
+                <div class="embed"><b>🧠 Trivia · Question 1 of 5</b><p>Which planet has the most known moons?</p></div>
+                <div class="dc-buttons"><span>Earth</span><span>Mars</span><span class="ok">Saturn</span><span>Venus</span></div></div></div>
+              <ul class="panel-points"><li>Wordle, hangman, Connect Four, battleship, 2048, blackjack</li><li>AI games: murder mysteries, RPGs, 20 Questions, debates</li><li>Win coins and climb the leaderboards</li></ul>
+            </div>
+
+            <div class="tab-panel" role="tabpanel" id="tp-levels" aria-labelledby="t-levels" hidden>
+              <div class="msg"><img class="av" src="assets/brand/icon-192.png" alt="" width="36" height="36"><div><p class="who">Muninn <span class="app">APP</span> <time>Today at 18:30</time></p><p>🎉 <span class="mention">@Sam</span> reached <b>level 12</b>! (+600 🪙)</p></div></div>
+              <div class="msg"><span class="av av-user">S</span><div><p class="who">Sam <time>Today at 18:31</time></p><p class="cmd">/profile</p></div></div>
+              <div class="msg"><img class="av" src="assets/brand/icon-192.png" alt="" width="36" height="36"><div><p class="who">Muninn <span class="app">APP</span> <time>Today at 18:31</time></p>
+                <div class="embed profile"><b>Sam's profile</b><p class="lvl">Level 12 · Rank #3</p><span class="xp"><i></i></span><div class="pgrid"><span><small>🪙 Coins</small>4,820</span><span><small>🔥 Streak</small>9 days</span><span><small>♟️ Chess</small>1,284</span></div></div></div></div>
+            </div>
+
+            <div class="tab-panel" role="tabpanel" id="tp-mod" aria-labelledby="t-mod" hidden>
+              <div class="msg"><img class="av" src="assets/brand/icon-192.png" alt="" width="36" height="36"><div><p class="who">Muninn <span class="app">APP</span> <time>Today at 03:12</time></p>
+                <div class="embed warn"><b>🛡️ Automod: message removed</b><p>User <span class="mention">@spam_bot_99</span> · reason: <b>invite link</b></p><p class="muted">Timed out for 10 minutes · #general</p></div></div></div>
+              <div class="msg"><img class="av" src="assets/brand/icon-192.png" alt="" width="36" height="36"><div><p class="who">Muninn <span class="app">APP</span> <time>Today at 03:15</time></p>
+                <div class="embed info"><b>🎫 Ticket #42 opened</b><p>by <span class="mention">@Aisha</span>: “Can't claim my giveaway prize”</p></div></div></div>
+              <ul class="panel-points"><li>Spam, links and blocked words; optional AI moderation</li><li>Logs, warnings, timeouts, verification</li><li>Tickets, reaction roles and giveaways</li></ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Command ribbons: two rows drifting in opposite directions, pause on hover -->
+        <div class="marquee reveal" aria-label="Some of the commands">
+          <div class="mq-track">
+            <span class="chip">🤖 /ask</span><span class="chip">💬 /chat</span><span class="chip">📝 /summarize</span><span class="chip">🌍 /translate</span><span class="chip">🔎 /search</span><span class="chip">🎨 /imagine</span><span class="chip">🧑‍💻 /review</span><span class="chip">🎭 /persona</span><span class="chip">⏰ /remind</span><span class="chip">🌦️ /weather</span><span class="chip">📖 /define</span><span class="chip">🎂 /birthday</span>
+          </div>
+        </div>
+        <div class="marquee rev reveal" aria-hidden="true">
+          <div class="mq-track">
+            <span class="chip alt">♟️ /chess</span><span class="chip alt">🟩 /wordle</span><span class="chip alt">🪢 /hangman</span><span class="chip alt">🧠 /trivia</span><span class="chip alt">🃏 /blackjack</span><span class="chip alt">🔴 /connect4</span><span class="chip alt">🚢 /battleship</span><span class="chip alt">🧮 /2048</span><span class="chip alt">🐍 /snake</span><span class="chip alt">🕵️ /mystery</span><span class="chip alt">🗡️ /rpg</span><span class="chip alt">👤 /profile</span><span class="chip alt">🏆 /leaderboard</span><span class="chip alt">🪙 /daily</span>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Games: flip cards -->
     <section id="games">
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow">Games</span>
           <h2>Real game boards, right in Discord</h2>
-          <p>Boards are drawn as pictures on every move, so games look like the real thing.</p>
+          <p>Boards are drawn as pictures on every move. Hover or tap a card to flip it.</p>
         </div>
-        <div class="showcase">
-          <figure class="card shot wide reveal">
-            <img src="assets/chess.png" alt="A chess board in the middle of a game, with the last move highlighted" width="480" height="480" loading="lazy">
-            <figcaption><strong>♟️ Chess</strong><span>vs friends or Stockfish</span></figcaption>
-          </figure>
-          <figure class="card shot wide reveal">
-            <img src="assets/blackjack.png" alt="A blackjack table with the dealer's and player's cards" width="480" height="374" loading="lazy">
-            <figcaption><strong>🃏 Blackjack</strong><span>bet your coins</span></figcaption>
-          </figure>
-          <figure class="card shot reveal">
-            <img src="assets/wordle.png" alt="A Wordle board solved on the third guess" width="420" height="551" loading="lazy">
-            <figcaption><strong>🟩 Wordle</strong><span>daily &amp; practice</span></figcaption>
-          </figure>
-          <figure class="card shot reveal">
-            <img src="assets/connect4.png" alt="A Connect Four board with red and yellow discs" width="420" height="397" loading="lazy">
-            <figcaption><strong>🔴 Connect Four</strong><span>vs friends or the bot</span></figcaption>
-          </figure>
-          <figure class="card shot reveal">
-            <img src="assets/2048.png" alt="A 2048 board with tiles up to 2048" width="420" height="420" loading="lazy">
-            <figcaption><strong>🧮 2048</strong><span>chase the high score</span></figcaption>
-          </figure>
+        <div class="flips">
+          <button class="flip reveal" type="button" aria-label="Chess: show details">
+            <span class="flip-in">
+              <span class="face front"><img src="assets/chess.png" alt="A chess board mid-game" width="480" height="480" loading="lazy"><span class="flip-label"><b>♟️ Chess</b><span class="turn" aria-hidden="true">↻</span></span></span>
+              <span class="face back"><b>♟️ Chess</b><span class="cmdline">/chess [opponent] [difficulty]</span><span class="li">Play friends in rated games, or the Stockfish bot</span><span class="li">Move history and PGN export</span><span class="li">Win up to <b>120 🪙</b> vs the bot</span></span>
+            </span>
+          </button>
+          <button class="flip reveal" type="button" aria-label="Blackjack: show details" style="--d:80ms">
+            <span class="flip-in">
+              <span class="face front"><img src="assets/blackjack.png" alt="A blackjack table" width="480" height="374" loading="lazy"><span class="flip-label"><b>🃏 Blackjack</b><span class="turn" aria-hidden="true">↻</span></span></span>
+              <span class="face back"><b>🃏 Blackjack</b><span class="cmdline">/blackjack bet</span><span class="li">Hit, stand or double down</span><span class="li">Natural blackjack pays 2.5×</span><span class="li">Plus coinflip, dice and slots</span></span>
+            </span>
+          </button>
+          <button class="flip reveal" type="button" aria-label="Wordle: show details" style="--d:160ms">
+            <span class="flip-in">
+              <span class="face front"><img src="assets/wordle.png" alt="A solved Wordle board" width="420" height="551" loading="lazy"><span class="flip-label"><b>🟩 Wordle</b><span class="turn" aria-hidden="true">↻</span></span></span>
+              <span class="face back"><b>🟩 Wordle</b><span class="cmdline">/wordle [daily]</span><span class="li">Six guesses, real game colors and keyboard</span><span class="li">A daily word for everyone</span><span class="li">Solve fast for more coins</span></span>
+            </span>
+          </button>
+          <button class="flip reveal" type="button" aria-label="Connect Four: show details">
+            <span class="flip-in">
+              <span class="face front"><img src="assets/connect4.png" alt="A Connect Four board" width="420" height="397" loading="lazy"><span class="flip-label"><b>🔴 Connect Four</b><span class="turn" aria-hidden="true">↻</span></span></span>
+              <span class="face back"><b>🔴 Connect Four</b><span class="cmdline">/connect4 [opponent]</span><span class="li">Drop discs with buttons</span><span class="li">The winning four light up</span><span class="li">Play a friend or the bot</span></span>
+            </span>
+          </button>
+          <button class="flip reveal" type="button" aria-label="Battleship: show details" style="--d:80ms">
+            <span class="flip-in">
+              <span class="face front"><img src="assets/battleship.png" alt="Two battleship grids with hits and misses" width="560" height="289" loading="lazy"><span class="flip-label"><b>🚢 Battleship</b><span class="turn" aria-hidden="true">↻</span></span></span>
+              <span class="face back"><b>🚢 Battleship</b><span class="cmdline">/battleship [opponent]</span><span class="li">Fire at squares like B4</span><span class="li">Hits give you another shot</span><span class="li">Check your own fleet privately</span></span>
+            </span>
+          </button>
+          <button class="flip reveal" type="button" aria-label="2048: show details" style="--d:160ms">
+            <span class="flip-in">
+              <span class="face front"><img src="assets/2048.png" alt="A 2048 board" width="420" height="420" loading="lazy"><span class="flip-label"><b>🧮 2048</b><span class="turn" aria-hidden="true">↻</span></span></span>
+              <span class="face back"><b>🧮 2048</b><span class="cmdline">/2048</span><span class="li">Slide with the arrow buttons</span><span class="li">Tiles in the original colors</span><span class="li">Chase the server high score</span></span>
+            </span>
+          </button>
         </div>
       </div>
     </section>
 
-    <section>
+    <!-- Chess: auto-advancing difficulty stepper with a big outline number -->
+    <section id="chess">
       <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Chess bot</span>
+          <h2>From first game to Grandmaster</h2>
+          <p>Powered by Stockfish, the engine behind chess.com and lichess. Pick your level with <code>/chess difficulty:</code></p>
+        </div>
+        <div class="ladder reveal">
+          <div class="ladder-steps" role="tablist" aria-label="Chess bot levels">
+            <button role="tab" aria-selected="true" data-step="0"><span class="bar"><i></i></span><small>🟢 Easy</small><b>~250</b></button>
+            <button role="tab" aria-selected="false" data-step="1"><span class="bar"><i></i></span><small>🟡 Intermediate</small><b>~750</b></button>
+            <button role="tab" aria-selected="false" data-step="2"><span class="bar"><i></i></span><small>🟠 Expert</small><b>~1550</b></button>
+            <button role="tab" aria-selected="false" data-step="3"><span class="bar"><i></i></span><small>🔴 Master</small><b>~2200</b></button>
+            <button role="tab" aria-selected="false" data-step="4"><span class="bar"><i></i></span><small>🟣 Grandmaster</small><b>~2600</b></button>
+          </div>
+          <div class="ladder-panel card" role="tabpanel" aria-live="polite">
+            <span class="ladder-num">250</span>
+            <div class="ladder-body">
+              <h3>🟢 Easy</h3>
+              <p>Just learning the moves? This bot blunders often and misses checkmates. A friendly first opponent.</p>
+              <span class="reward">Win: <b>5 🪙</b></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Get started: timeline that fills while you scroll -->
+    <section>
+      <div class="container narrow">
         <div class="section-head reveal">
           <span class="eyebrow">Get started</span>
           <h2>Up and running in a minute</h2>
         </div>
-        <div class="steps">
-          <div class="card step reveal"><h3>Add the bot</h3><p>Click <strong>Add to Discord</strong> and pick your server. You need the Manage Server permission.</p></div>
-          <div class="card step reveal"><h3>Say hi</h3><p>Mention <code>@<span data-site="botName">Muninn</span></code> in any channel, or use <code>/ask</code>.</p></div>
-          <div class="card step reveal"><h3>Explore</h3><p>Type <code>/help</code> for every command, and <code>/config</code> to set up welcome messages, logs and more.</p></div>
+        <div class="timeline">
+          <span class="tl-track" aria-hidden="true"></span><span class="tl-fill" aria-hidden="true"></span>
+          <div class="tl-step"><span class="tl-dot">1</span><b>Add the bot</b><p>Click <strong>Add to Discord</strong> and pick your server. You need the Manage Server permission.</p></div>
+          <div class="tl-step"><span class="tl-dot">2</span><b>Say hi</b><p>Mention <code>@<span data-site="botName">Muninn</span></code> in any channel, or use <code>/ask</code>.</p></div>
+          <div class="tl-step"><span class="tl-dot">3</span><b>Explore</b><p>Type <code>/help</code> to browse every command by category.</p></div>
+          <div class="tl-step"><span class="tl-dot">4</span><b>Make it yours</b><p>Use <code>/config</code> for welcome messages, logs, level roles and automod, and <code>/persona</code> to give the AI a personality.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ: accordion with a rotating plus -->
+    <section id="faq">
+      <div class="container faq">
+        <div class="faq-side reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Questions?</h2>
+          <p>Can't find your answer? Email <a data-mailto href="#">us</a>.</p>
+          <div class="card faq-cta">
+            <b>Ready to try it?</b>
+            <p>It's free, and it takes seconds.</p>
+            <a class="btn shine" data-invite href="#">Add to Discord</a>
+          </div>
+        </div>
+        <div class="faq-list reveal">
+          <div class="qa"><button type="button" aria-expanded="false">Is Muninn free?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>Yes. Every feature is free to use. A few picture features (<code>/imagine</code>, story illustrations and <code>/guessprompt</code>) need a paid AI plan on the bot's side, so they may be switched off.</p></div></div></div>
+          <div class="qa"><button type="button" aria-expanded="false">What data does the bot keep?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>Only what features need: recent AI chat messages (clear them with <code>/reset</code>), levels, coins, game stats and server settings. We never sell data. The <a href="privacy.html">Privacy Policy</a> has the full list and how to delete it.</p></div></div></div>
+          <div class="qa"><button type="button" aria-expanded="false">How do I stop the AI replying in a channel?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>Use <code>/disablechat channel:</code> on that channel. Run it again to turn AI chat back on. <code>/disablenotif</code> does the same for level-up messages.</p></div></div></div>
+          <div class="qa"><button type="button" aria-expanded="false">Can I change the AI's personality?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>Yes. <code>/persona set</code> turns it into anything from "a grumpy pirate" to "a patient math teacher" for your server. <code>/persona clear</code> goes back to normal.</p></div></div></div>
+          <div class="qa"><button type="button" aria-expanded="false">How strong is the chess bot?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>It runs Stockfish at five levels, from Easy (about 250 Elo) to Grandmaster (about 2600). The ratings are approximate. Games between members can be rated, and ratings show on <code>/profile</code> and <code>/leaderboard</code>.</p></div></div></div>
+          <div class="qa"><button type="button" aria-expanded="false">Are coins worth real money?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>No. Coins, items and levels are just for fun and can't be bought or cashed out. The casino games only use these virtual coins.</p></div></div></div>
         </div>
       </div>
     </section>
@@ -155,8 +267,8 @@
           <h2>Bring <span class="gradient-text" data-site="botName">Muninn</span> to your server</h2>
           <p>Free, and it takes seconds to set up.</p>
           <div class="hero-actions">
-            <a class="btn" data-invite href="#">➕ Add to Discord</a>
-            <a class="btn btn-ghost" href="privacy.html">How we handle data</a>
+            <a class="btn shine btn-arrow" data-invite href="#">Add to Discord<span class="circ" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+            <a class="btn btn-ghost btn-fill" href="privacy.html">How we handle data</a>
           </div>
         </div>
       </div>
