@@ -149,13 +149,13 @@
         <div class="section-head reveal">
           <span class="eyebrow">Games</span>
           <h2>Real game boards, right in Discord</h2>
-          <p>Boards are drawn as pictures on every move. Hover or tap a card to flip it.</p>
+          <p>Boards are drawn as pictures on every move. In Wordle, Hangman, chess and Battleship you can simply type your move in chat. Hover or tap a card to flip it.</p>
         </div>
         <div class="flips">
           <button class="flip reveal" type="button" aria-label="Chess: show details">
             <span class="flip-in">
               <span class="face front"><img src="assets/chess.png" alt="A chess board mid-game" width="480" height="480" loading="lazy"><span class="flip-label"><b>♟️ Chess</b><span class="turn" aria-hidden="true">↻</span></span></span>
-              <span class="face back"><b>♟️ Chess</b><span class="cmdline">/chess [opponent] [difficulty]</span><span class="li">Play friends in rated games, or the Stockfish bot</span><span class="li">Move history and PGN export</span><span class="li">Win up to <b>120 🪙</b> vs the bot</span></span>
+              <span class="face back"><b>♟️ Chess</b><span class="cmdline">/chess [opponent] [difficulty]</span><span class="li">Play friends in rated games, or the Stockfish bot</span><span class="li">Type moves like e4 or Nf3 in chat</span><span class="li">Win up to <b>120 🪙</b> vs the bot</span></span>
             </span>
           </button>
           <button class="flip reveal" type="button" aria-label="Blackjack: show details" style="--d:80ms">
@@ -167,7 +167,7 @@
           <button class="flip reveal" type="button" aria-label="Wordle: show details" style="--d:160ms">
             <span class="flip-in">
               <span class="face front"><img src="assets/wordle.png" alt="A solved Wordle board" width="420" height="551" loading="lazy"><span class="flip-label"><b>🟩 Wordle</b><span class="turn" aria-hidden="true">↻</span></span></span>
-              <span class="face back"><b>🟩 Wordle</b><span class="cmdline">/wordle [daily]</span><span class="li">Six guesses, real game colors and keyboard</span><span class="li">A daily word for everyone</span><span class="li">Solve fast for more coins</span></span>
+              <span class="face back"><b>🟩 Wordle</b><span class="cmdline">/wordle [daily] [stats]</span><span class="li">Type your guesses in chat</span><span class="li">A daily word for everyone, with streaks</span><span class="li">Stats and guess distribution, like the real one</span></span>
             </span>
           </button>
           <button class="flip reveal" type="button" aria-label="Connect Four: show details">
@@ -179,7 +179,7 @@
           <button class="flip reveal" type="button" aria-label="Battleship: show details" style="--d:80ms">
             <span class="flip-in">
               <span class="face front"><img src="assets/battleship.png" alt="Two battleship grids with hits and misses" width="560" height="289" loading="lazy"><span class="flip-label"><b>🚢 Battleship</b><span class="turn" aria-hidden="true">↻</span></span></span>
-              <span class="face back"><b>🚢 Battleship</b><span class="cmdline">/battleship [opponent]</span><span class="li">Fire at squares like B4</span><span class="li">Hits give you another shot</span><span class="li">Check your own fleet privately</span></span>
+              <span class="face back"><b>🚢 Battleship</b><span class="cmdline">/battleship [opponent]</span><span class="li">Type a square like B4 in chat to fire</span><span class="li">Hits give you another shot</span><span class="li">Check your own fleet privately</span></span>
             </span>
           </button>
           <button class="flip reveal" type="button" aria-label="2048: show details" style="--d:160ms">
@@ -255,6 +255,7 @@
           <div class="qa"><button type="button" aria-expanded="false">What data does the bot keep?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>Only what features need: recent AI chat messages (clear them with <code>/reset</code>), levels, coins, game stats and server settings. We never sell data. The <a href="privacy.html">Privacy Policy</a> has the full list and how to delete it.</p></div></div></div>
           <div class="qa"><button type="button" aria-expanded="false">How do I stop the AI replying in a channel?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>Use <code>/disablechat channel:</code> on that channel. Run it again to turn AI chat back on. <code>/disablenotif</code> does the same for level-up messages.</p></div></div></div>
           <div class="qa"><button type="button" aria-expanded="false">Can I change the AI's personality?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>Yes. <code>/persona set</code> turns it into anything from "a grumpy pirate" to "a patient math teacher" for your server. <code>/persona clear</code> goes back to normal.</p></div></div></div>
+          <div class="qa"><button type="button" aria-expanded="false">Do I have to click buttons to play?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>No. In Wordle, Hangman, chess and Battleship you can type your guess or move in chat, like <code>crane</code>, <code>e</code>, <code>Nf3</code> or <code>B4</code>. Only your own moves count, and the rest of the chat is left alone. When the game ends, your typed moves are cleaned up, since the board picture already shows them. The buttons still work too.</p></div></div></div>
           <div class="qa"><button type="button" aria-expanded="false">How strong is the chess bot?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>It runs Stockfish at five levels, from Easy (about 250 Elo) to Grandmaster (about 2600). The ratings are approximate. Games between members can be rated, and ratings show on <code>/profile</code> and <code>/leaderboard</code>.</p></div></div></div>
           <div class="qa"><button type="button" aria-expanded="false">Are coins worth real money?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>No. Coins, items and levels are just for fun and can't be bought or cashed out. The casino games only use these virtual coins.</p></div></div></div>
         </div>
