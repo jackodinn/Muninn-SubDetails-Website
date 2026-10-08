@@ -69,7 +69,7 @@
           <table>
             <tr><th>Data</th><th>Why</th><th>How long</th></tr>
             <tr><td>Discord user, server and channel IDs</td><td>To link the data below to you and your server</td><td>As long as the related data</td></tr>
-            <tr><td>Recent AI chat messages (text and display name) per channel</td><td>So the AI remembers the conversation</td><td>Only the last ~20 messages per channel; cleared with <code>/reset</code></td></tr>
+            <tr><td>Recent AI chat messages (text and display name) per channel</td><td>So the AI remembers the conversation</td><td>Only the last ~20 messages per channel; cleared with <code>/ai reset</code></td></tr>
             <tr><td>XP, level, message count, items, achievements, game stats (per server)</td><td>Levels, economy, leaderboards</td><td>Until deleted</td></tr>
             <tr><td>Coin balance and daily streak (one wallet shared across every server with the bot)</td><td>The economy and <code>/daily</code></td><td>Until deleted</td></tr>
             <tr><td>When you last earned coins from quick games and from each opponent</td><td>Stopping coin farming (cooldowns and daily limits)</td><td>Overwritten as you play; older than a day is no longer used</td></tr>
@@ -79,9 +79,9 @@
             <tr><td>Birthday (month and day only)</td><td>Birthday announcements</td><td>Until you use <code>/birthday remove</code></td></tr>
             <tr><td>Moderation warnings (reason, moderator)</td><td>Server moderation</td><td>Until a moderator clears them</td></tr>
             <tr><td>Server settings, giveaway entries, ticket and starboard records</td><td>Those features</td><td>Until deleted</td></tr>
-            <tr><td>Marriage (who you're married to, and since when) from <code>/marry</code></td><td>Shown on <code>/profile</code></td><td>Until you use <code>/divorce</code></td></tr>
+            <tr><td>Marriage (who you're married to, and since when) from <code>/marry</code></td><td>Shown on <code>/profile</code></td><td>Until you use <code>/marry divorce</code></td></tr>
             <tr><td>Your virtual pet (name, species, hunger, happiness, level, when you last fed or played with it)</td><td>The <code>/pet</code> command</td><td>Until deleted</td></tr>
-            <tr><td>When you last used <code>/rob</code> or were robbed</td><td>The robbery cooldowns</td><td>Overwritten each time</td></tr>
+            <tr><td>When you last used <code>/eco rob</code> or were robbed</td><td>The robbery cooldowns</td><td>Overwritten each time</td></tr>
             <tr><td>Which bot announcement you've already seen</td><td>So each update is shown to you only once</td><td>Until deleted; replaced by the next announcement</td></tr>
             <tr><td>Feedback you send with <code>/feedback</code> (your message, any screenshots you attach, Discord username and ID, and the server's name and ID)</td><td>Posted to the developer's private Discord channel so they can read it and follow up. Messages that aren't real feedback are not posted or kept</td><td>Until the developer deletes it</td></tr>
           </table>
@@ -94,7 +94,7 @@
           <li><strong>Google (Gemini API):</strong> when you use AI features, your message text, attached files and recent chat history are sent to Google to generate a reply. When AI moderation is on, messages are sent to Google to be checked. Feedback sent with <code>/feedback</code>, including screenshots, is sent to Google to filter out junk before it reaches the developer. Google processes this under the <a href="https://ai.google.dev/gemini-api/terms">Gemini API Terms</a>. On Google's free tier, <strong>Google may use this content to improve its products</strong>, and it may be reviewed by humans. Don't send personal or sensitive information to the AI.</li>
           <li><strong>People in other servers:</strong> global leaderboards (<code>/leaderboard scope: Global</code>) show your Discord display name next to your coins, total XP, minigame wins or best chess rating to users of any server with the bot.</li>
           <li><strong>Server moderators:</strong> if a server has a log channel, the bot posts deleted and edited messages, joins and leaves, and moderation actions there.</li>
-          <li><strong>Public lookup services:</strong> <code>/weather</code> sends the city name to Open-Meteo, <code>/define</code> sends the word to dictionaryapi.dev, and <code>/wiki</code> sends your search to Wikipedia.</li>
+          <li><strong>Public lookup services:</strong> <code>/tools weather</code> sends the city name to Open-Meteo, <code>/tools define</code> sends the word to dictionaryapi.dev, and <code>/tools wiki</code> sends your search to Wikipedia.</li>
           <li><strong>Discord</strong> receives everything the bot posts, under <a href="https://discord.com/privacy">Discord's Privacy Policy</a>.</li>
         </ul>
 
@@ -103,7 +103,7 @@
 
         <h2>5. Your choices</h2>
         <ul>
-          <li>Use <code>/reset</code> to clear the AI's memory of a channel, and <code>/birthday remove</code> to delete your birthday.</li>
+          <li>Use <code>/ai reset</code> to clear the AI's memory of a channel, and <code>/birthday remove</code> to delete your birthday.</li>
           <li>To delete all your data, or all data for a server you own, email <a data-mailto href="#">your-email@example.com</a> with your Discord user ID (or server ID). We'll delete it within 30 days.</li>
           <li>Server admins can turn off features like AI moderation, auto-reply and logging with <code>/config</code>, or remove the bot.</li>
         </ul>
