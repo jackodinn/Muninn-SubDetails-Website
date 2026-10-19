@@ -20,8 +20,8 @@ Keep `privacy.html` accurate when the bot starts storing or sending new kinds of
 
 ## Community expansion branch
 
-Continue implementation work on `codex/muninn-expansion`, matching the bot repository. Homepage
-updates are prepared on this branch and await the owner’s explicit **go live** before publication.
+Continue implementation work on `codex/muninn-expansion`, matching the bot repository. The owner approved publishing the current expansion with **go live** on October 19, 2026.
+Continue later edits on this same branch; obtain publication authorization for subsequent releases.
 The updated pages cover quests, cosmetics, suggestions, tags, opt-in events, tournaments, matchmaking,
 private study decks/bookmarks, data controls, AI limits, digests, reaction GIFs and optional NYT Wordle.
 AI source drafts need review; NYT connectivity remains dependent on service access policy.
