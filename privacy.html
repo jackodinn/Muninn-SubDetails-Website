@@ -48,7 +48,7 @@
       <div class="container">
         <span class="eyebrow">Legal</span>
         <h1>Privacy Policy</h1>
-        <p>Effective <span data-site="effectiveDate">September 30, 2026</span></p>
+        <p>Effective <span data-site="effectiveDate">October 19, 2026</span></p>
       </div>
     </section>
     <div class="container doc">
@@ -61,7 +61,8 @@
         <ul>
           <li>you mention it, reply to it, DM it, or use a command;</li>
           <li>you write in a channel or thread where a server admin turned on auto-reply, or in a running game (for example word chain, counting, story, 20 Questions or a mystery thread);</li>
-          <li>a server admin enabled automod or AI moderation, which checks new messages in that server.</li>
+          <li>a server admin enabled automod or AI moderation, which checks new messages in that server;</li>
+          <li>a server admin enabled scheduled digests in a public text channel. Digests process up to the latest 100 messages since the prior run, up to seven days, and post only into that same channel. Private channels and threads are excluded.</li>
         </ul>
 
         <h2>2. What the bot stores</h2>
@@ -69,21 +70,31 @@
           <table>
             <tr><th>Data</th><th>Why</th><th>How long</th></tr>
             <tr><td>Discord user, server and channel IDs</td><td>To link the data below to you and your server</td><td>As long as the related data</td></tr>
-            <tr><td>Recent AI chat messages (text and display name) per channel</td><td>So the AI remembers the conversation</td><td>Only the last ~20 messages per channel; cleared with <code>/ai reset</code></td></tr>
+            <tr><td>Recent AI chat messages (text and display name) per channel</td><td>So the AI remembers the conversation</td><td>Only the configured recent history per channel (default ~20 messages), with a maximum age of 30 days while cleanup runs; cleared with <code>/ai reset</code>. New exchanges include the requesting user ID for self-service deletion; legacy history has no author attribution.</td></tr>
             <tr><td>XP, level, message count, items, achievements, game stats (per server)</td><td>Levels, economy, leaderboards</td><td>Until deleted</td></tr>
             <tr><td>Coin balance and daily streak (one wallet shared across every server with the bot)</td><td>The economy and <code>/daily</code></td><td>Until deleted</td></tr>
             <tr><td>When you last earned coins from quick games and from each opponent</td><td>Stopping coin farming (cooldowns and daily limits)</td><td>Overwritten as you play; older than a day is no longer used</td></tr>
-            <tr><td>Chess ratings (rating, rating confidence, peak, rated wins/losses/draws, chosen starting level)</td><td>Rated chess games, <code>/profile</code> and the chess leaderboard</td><td>Until deleted</td></tr>
+            <tr><td>Chess ratings (rating, rating confidence, peak, rated wins/losses/draws, chosen starting level)</td><td>Rated chess games, <code>/profile view</code> and the chess leaderboard</td><td>Until deleted</td></tr>
             <tr><td>Your daily Wordle guesses and result (one game per day)</td><td>So the daily word can be played once, resumed and shared, and for your Wordle stats (games played, win %, streaks, guess distribution), which other users can view with <code>/wordle stats</code></td><td>Until deleted</td></tr>
             <tr><td>Reminders and scheduled messages</td><td>To send them later</td><td>Reminders are deleted once sent</td></tr>
             <tr><td>Birthday (month and day only)</td><td>Birthday announcements</td><td>Until you use <code>/birthday remove</code></td></tr>
             <tr><td>Moderation warnings (reason, moderator)</td><td>Server moderation</td><td>Until a moderator clears them</td></tr>
             <tr><td>Server settings, giveaway entries, ticket and starboard records</td><td>Those features</td><td>Until deleted</td></tr>
-            <tr><td>Marriage (who you're married to, and since when) from <code>/marry</code></td><td>Shown on <code>/profile</code></td><td>Until you use <code>/marry divorce</code></td></tr>
+            <tr><td>Marriage (who you're married to, and since when) from <code>/marry</code></td><td>Shown on <code>/profile view</code></td><td>Until you use <code>/marry divorce</code></td></tr>
             <tr><td>Your virtual pet (name, species, hunger, happiness, level, when you last fed or played with it)</td><td>The <code>/pet</code> command</td><td>Until deleted</td></tr>
             <tr><td>When you last used <code>/eco rob</code> or were robbed</td><td>The robbery cooldowns</td><td>Overwritten each time</td></tr>
             <tr><td>Which bot announcement you've already seen</td><td>So each update is shown to you only once</td><td>Until deleted; replaced by the next announcement</td></tr>
             <tr><td>Feedback you send with <code>/feedback</code> (your message, any screenshots you attach, Discord username and ID, and the server's name and ID)</td><td>Posted to the developer's private Discord channel so they can read it and follow up. Messages that aren't real feedback are not posted or kept</td><td>Until the developer deletes it</td></tr>
+            <tr><td>Quest progress and claims, cosmetic ownership and equipped styles</td><td>Capped rewards and profile/pet/game-board customization</td><td>Quest history is pruned after 35 days; cosmetics until removed or deleted</td></tr>
+            <tr><td>Suggestions, votes and staff responses; staff-authored reusable tags</td><td>Server voting, decisions and saved answers</td><td>Until removed or deleted; displayed Discord messages are separate</td></tr>
+            <tr><td>Event titles, times, host/channel IDs and opt-in subscriptions</td><td>DM reminders 15 minutes before events</td><td>Subscriptions until unsubscribe, cancellation or reminder processing; event records pruned 30 days after the event</td></tr>
+            <tr><td>Tournament entries, brackets, reported results, deadlines and funded prizes; matchmaking game and approximate rating</td><td>Organizing competitive games</td><td>Tournament records until deleted/anonymized; queue entries expire after 24 hours</td></tr>
+            <tr><td>Private study decks, questions, answers, due times and review intervals</td><td>Editable flashcards and spaced repetition</td><td>Until the deck or personal data is deleted</td></tr>
+            <tr><td>Private bookmark links and labels</td><td>Your saved message references; original message text is not copied</td><td>Until removed or deleted</td></tr>
+            <tr><td>AI API attempt counts and reported token totals per user/server/UTC day</td><td>Usage reports and configurable request/token limits</td><td>90 days; deleted users’ server totals are aggregated anonymously</td></tr>
+            <tr><td>Digest channel, creator, interval and last-run timestamps</td><td>Scheduled public-channel summaries</td><td>Until disabled or deleted; no separate copy of source text is stored for digests</td></tr>
+            <tr><td>Pseudonymized daily/reward cooldowns, claimed quests and AI-limit counters after deletion</td><td>Preventing deletion/resume from resetting reward or API limits; no coin balances or content are retained here</td><td>Up to seven days, then removed by cleanup</td></tr>
+            <tr><td>A Discord user ID with a collection-paused preference</td><td>Preventing automatic recreation after a deletion request</td><td>Until you explicitly use <code>/privacy resume</code></td></tr>
           </table>
         </div>
         <p>Games against the chess bot are calculated on our own server by the Stockfish engine; no game data is sent anywhere for that.</p>
@@ -91,20 +102,24 @@
 
         <h2>3. Who else receives data</h2>
         <ul>
-          <li><strong>Google (Gemini API):</strong> when you use AI features, your message text, attached files and recent chat history are sent to Google to generate a reply. When AI moderation is on, messages are sent to Google to be checked. Feedback sent with <code>/feedback</code>, including screenshots, is sent to Google to filter out junk before it reaches the developer. Google processes this under the <a href="https://ai.google.dev/gemini-api/terms">Gemini API Terms</a>. On Google's free tier, <strong>Google may use this content to improve its products</strong>, and it may be reviewed by humans. Don't send personal or sensitive information to the AI.</li>
+          <li><strong>Google (Gemini API):</strong> when you use AI features, your message text, attached files and recent chat history are sent to Google to generate a reply. Study-card generation sends the notes or files you choose. Scheduled digests send selected public-channel text and message links to Google, then post a summary in that same channel. When AI moderation is on, messages are sent to Google to be checked. Feedback sent with <code>/feedback</code>, including screenshots, is sent to Google to filter out junk before it reaches the developer. Google processes this under the <a href="https://ai.google.dev/gemini-api/terms">Gemini API Terms</a>. On Google's free tier, <strong>Google may use this content to improve its products</strong>, and it may be reviewed by humans. Don't send personal or sensitive information to the AI.</li>
           <li><strong>People in other servers:</strong> global leaderboards (<code>/leaderboard scope: Global</code>) show your Discord display name next to your coins, total XP, minigame wins or best chess rating to users of any server with the bot.</li>
           <li><strong>Server moderators:</strong> if a server has a log channel, the bot posts deleted and edited messages, joins and leaves, and moderation actions there.</li>
           <li><strong>Public lookup services:</strong> <code>/tools weather</code> sends the city name to Open-Meteo, <code>/tools define</code> sends the word to dictionaryapi.dev, and <code>/tools wiki</code> sends your search to Wikipedia.</li>
+          <li><strong>GIF providers:</strong> when enabled, reaction GIFs and /ikun searches send fixed search phrases to KLIPY or GIPHY, plus the bot operator’s API authentication. Discord user IDs are not sent as GIF-search identifiers. Loading a displayed GIF may contact its media host.</li>
+          <li><strong>NYT:</strong> the optional daily Wordle source requests robots.txt and the current date’s public puzzle from nytimes.com. It sends no Discord user IDs, guesses or scores. If access is disallowed or unavailable, the bot uses a local daily puzzle.</li>
           <li><strong>Discord</strong> receives everything the bot posts, under <a href="https://discord.com/privacy">Discord's Privacy Policy</a>.</li>
         </ul>
 
         <h2>4. Where it's stored</h2>
-        <p>Data is stored in a database on a server hosted by Google Cloud in the United States. Access is limited to the developer.</p>
+        <p>Data is stored in the bot operator’s SQLite database and rotating backups. Access is limited to the developer. Automated expiry runs while the bot is online; expired records may remain until the next cleanup.</p>
 
         <h2>5. Your choices</h2>
         <ul>
           <li>Use <code>/ai reset</code> to clear the AI's memory of a channel, and <code>/birthday remove</code> to delete your birthday.</li>
-          <li>To delete all your data, or all data for a server you own, email <a data-mailto href="#">your-email@example.com</a> with your Discord user ID (or server ID). We'll delete it within 30 days.</li>
+          <li><code>/privacy export</code> privately downloads your attributable bot-database records. <code>/privacy delete</code> asks for confirmation, then deletes personal records and pauses collection until you explicitly use <code>/privacy resume</code>. Deletion removes coins, progress, cards, bookmarks and subscriptions; hosted tournaments are cancelled and current matches forfeited.</li>
+          <li>Self-service deletion excludes staff moderation history, public Discord messages, legacy chat history without author IDs, third-party copies and existing backups. Historical tournament and ticket references are anonymized. Server moderation and audit logging continue under staff settings. Pseudonymized financial cooldowns, claimed quest markers and AI-limit counters remain for up to seven days to prevent reset abuse. An ID and paused preference remain to honor your choice, and anonymous server AI totals remain for quotas. Backups keep the newest seven copies as new backups run; they are not erased immediately. Contact the developer in Discord for remaining requests, including server-wide deletion or legacy records.</li>
+          <li>Unsubscribe from events with <code>/event unsubscribe</code>, leave queues with <code>/queue leave</code>, delete decks with <code>/study delete</code> and remove bookmarks with <code>/bookmark remove</code>.</li>
           <li>Server admins can turn off features like AI moderation, auto-reply and logging with <code>/config</code>, or remove the bot.</li>
         </ul>
 
@@ -115,7 +130,7 @@
         <p>We may update this policy. The date at the top shows the latest version.</p>
 
         <h2>8. Contact</h2>
-        <p>Email <a data-mailto href="#">your-email@example.com</a>. See also our <a href="terms.html">Terms of Service</a>.</p>
+        <p>Contact the developer in Discord or use <code>/feedback</code> in the bot. Do not post personal data or credentials in public support channels. See also our <a href="terms.html">Terms of Service</a>.</p>
       </article>
     </div>
   </main>
@@ -123,7 +138,7 @@
   <footer>
     <div class="container">
       <p>© <span data-year>2026</span> <span data-site="botName">Muninn</span> · made by <span data-site="developer">Odin</span></p>
-      <nav aria-label="Footer"><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a><a data-mailto="link" href="#">Contact</a></nav>
+      <nav aria-label="Footer"><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a><a data-contact="link" href="#">Contact</a></nav>
     </div>
   </footer>
 </body>

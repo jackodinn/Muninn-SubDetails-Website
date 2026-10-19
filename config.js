@@ -2,17 +2,17 @@
 window.SITE = {
   botName: 'Muninn',
   developer: 'Odin',
-  contactEmail: 'jackodinn@gmail.com', // where people can ask for data deletion
+  supportUrl: 'https://github.com/jackodinn/Discord-AIChatbot/issues', // Public support only; use Discord for private requests
   applicationId: '766474857352527912', // Developer Portal → General Information → Application ID
-  effectiveDate: 'September 30, 2026',
+  effectiveDate: 'October 19, 2026',
 };
 
 // Fill placeholders like <span data-site="botName"></span> and the invite link.
 document.addEventListener('DOMContentLoaded', () => {
   for (const el of document.querySelectorAll('[data-site]')) el.textContent = window.SITE[el.dataset.site];
-  for (const el of document.querySelectorAll('[data-mailto]')) {
-    el.href = `mailto:${window.SITE.contactEmail}`;
-    if (el.dataset.mailto !== 'link') el.textContent = window.SITE.contactEmail; // "link" keeps the text
+  for (const el of document.querySelectorAll('[data-contact]')) {
+    el.href = window.SITE.supportUrl;
+    if (el.dataset.contact !== 'link') el.textContent = 'Contact the developer'; // "link" keeps the text
   }
   // Every "Add to Discord" button (data-invite) gets the invite link, or is hidden without an Application ID.
   const hasId = /^\d+$/.test(window.SITE.applicationId);

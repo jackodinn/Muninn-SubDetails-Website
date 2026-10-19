@@ -57,13 +57,13 @@
         </div>
         <span class="badge"><span class="dot"></span>Free · powered by Google Gemini</span>
         <h1><span data-split>Your server's</span> <span class="rot"><span class="on">AI companion</span><span>game night</span><span>chess coach</span><span>hype crew</span><span>bouncer</span></span></h1>
-        <p class="lead"><span data-site="botName">Muninn</span> chats, plays and keeps order. AI conversations, 30 minigames, a real chess engine, levels and coins, and moderation tools, all in one bot.</p>
+        <p class="lead"><span data-site="botName">Muninn</span> chats, plays and keeps order. AI conversations, 30 minigames, quests and tournaments, private study decks, levels and coins, and moderation tools, all in one bot.</p>
         <div class="hero-actions">
           <a class="btn shine btn-arrow" data-invite href="#">Add to Discord<span class="circ" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
           <a class="btn btn-ghost btn-fill" href="#features">Explore features</a>
         </div>
         <div class="stats">
-          <div class="stat reveal"><strong><span data-count="28">28</span></strong><span>AI features</span></div>
+          <div class="stat reveal"><strong><span data-count="40">40</span></strong><span>command groups</span></div>
           <div class="stat reveal" style="--d:80ms"><strong><span data-count="30">30</span></strong><span>minigames</span></div>
           <div class="stat reveal" style="--d:160ms"><strong><span data-count="5">5</span></strong><span>chess bot levels</span></div>
           <div class="stat reveal" style="--d:240ms"><strong><span data-count="100">100</span>%</strong><span>free to use</span></div>
@@ -77,7 +77,7 @@
         <div class="section-head reveal">
           <span class="eyebrow">Features</span>
           <h2>See it in action</h2>
-          <p>Pick a feature to see how it looks in your server.</p>
+          <p>Pick a feature to see how it looks in your server. Use slash commands or most commands with <code>m!</code>, such as <code>m! game hangman</code>. Private study, bookmarks and data controls use slash commands.</p>
         </div>
         <div class="tabs reveal">
           <div class="tab-list" role="tablist" aria-label="Features">
@@ -94,18 +94,18 @@
             <div class="tab-panel" role="tabpanel" id="tp-chat" aria-labelledby="t-chat">
               <div class="msg"><span class="av av-user">S</span><div><p class="who">Sam <time>Today at 20:14</time></p><p><span class="mention">@Muninn</span> give my D&amp;D group a name, we're all terrible at dice</p></div></div>
               <div class="msg"><img class="av" src="assets/brand/icon-192.png" alt="" width="36" height="36"><div><p class="who">Muninn <span class="app">APP</span> <time>Today at 20:14</time></p><p>How about <b>The Critical Fumbles</b>? 🎲 Or <b>Natural Ones Anonymous</b>, for a group that's really embraced it.</p></div></div>
-              <ul class="panel-points"><li>Remembers the conversation per channel</li><li>Reads images, PDFs and voice messages</li><li>Give it a personality with <code>/persona</code></li></ul>
+              <ul class="panel-points"><li>Remembers the conversation per channel</li><li>Reads images, PDFs and voice messages</li><li>Give it a personality with <code>/aiconfig persona</code></li></ul>
             </div>
 
             <div class="tab-panel" role="tabpanel" id="tp-tools" aria-labelledby="t-tools" hidden>
-              <div class="msg"><span class="av av-user">A</span><div><p class="who">Aisha <time>Today at 09:02</time></p><p class="cmd">/summarize messages: 80</p></div></div>
+              <div class="msg"><span class="av av-user">A</span><div><p class="who">Aisha <time>Today at 09:02</time></p><p class="cmd">/ai summarize messages: 80</p></div></div>
               <div class="msg"><img class="av" src="assets/brand/icon-192.png" alt="" width="36" height="36"><div><p class="who">Muninn <span class="app">APP</span> <time>Today at 09:02</time></p>
                 <div class="embed"><b>📝 Summary of the last 80 messages</b><ul><li>Movie night moved to <b>Friday 9pm</b></li><li>Sam is bringing snacks, Jay is picking the film</li><li>Still undecided: horror or comedy</li></ul></div></div></div>
-              <ul class="panel-points"><li><code>/search</code> answers with live Google results and sources</li><li><code>/translate</code> and right-click → Translate to English</li><li>Transcribe voice messages, review code</li></ul>
+              <ul class="panel-points"><li><code>/ai search</code> answers with live Google results and sources</li><li><code>/ai translate</code> and right-click → Translate to English</li><li>Transcribe voice messages, review code</li></ul>
             </div>
 
             <div class="tab-panel" role="tabpanel" id="tp-games" aria-labelledby="t-games" hidden>
-              <div class="msg"><span class="av av-user">J</span><div><p class="who">Jay <time>Today at 22:40</time></p><p class="cmd">/trivia topic: space</p></div></div>
+              <div class="msg"><span class="av av-user">J</span><div><p class="who">Jay <time>Today at 22:40</time></p><p class="cmd">/game trivia topic: space</p></div></div>
               <div class="msg"><img class="av" src="assets/brand/icon-192.png" alt="" width="36" height="36"><div><p class="who">Muninn <span class="app">APP</span> <time>Today at 22:40</time></p>
                 <div class="embed"><b>🧠 Trivia · Question 1 of 5</b><p>Which planet has the most known moons?</p></div>
                 <div class="dc-buttons"><span>Earth</span><span>Mars</span><span class="ok">Saturn</span><span>Venus</span></div></div></div>
@@ -114,7 +114,7 @@
 
             <div class="tab-panel" role="tabpanel" id="tp-levels" aria-labelledby="t-levels" hidden>
               <div class="msg"><img class="av" src="assets/brand/icon-192.png" alt="" width="36" height="36"><div><p class="who">Muninn <span class="app">APP</span> <time>Today at 18:30</time></p><p>🎉 <span class="mention">@Sam</span> reached <b>level 12</b>! (+600 🪙)</p></div></div>
-              <div class="msg"><span class="av av-user">S</span><div><p class="who">Sam <time>Today at 18:31</time></p><p class="cmd">/profile</p></div></div>
+              <div class="msg"><span class="av av-user">S</span><div><p class="who">Sam <time>Today at 18:31</time></p><p class="cmd">/profile view</p></div></div>
               <div class="msg"><img class="av" src="assets/brand/icon-192.png" alt="" width="36" height="36"><div><p class="who">Muninn <span class="app">APP</span> <time>Today at 18:31</time></p>
                 <div class="embed profile"><b>Sam's profile</b><p class="lvl">Level 12 · Rank #3</p><span class="xp"><i></i></span><div class="pgrid"><span><small>🪙 Coins</small>4,820</span><span><small>🔥 Streak</small>9 days</span><span><small>♟️ Chess</small>1,284</span></div></div></div></div>
             </div>
@@ -132,13 +132,33 @@
         <!-- Command ribbons: two rows drifting in opposite directions, pause on hover -->
         <div class="marquee reveal" aria-label="Some of the commands">
           <div class="mq-track">
-            <span class="chip">🤖 /ask</span><span class="chip">💬 /chat</span><span class="chip">📝 /summarize</span><span class="chip">🌍 /translate</span><span class="chip">🔎 /search</span><span class="chip">🎨 /imagine</span><span class="chip">🧑‍💻 /review</span><span class="chip">🎭 /persona</span><span class="chip">⏰ /remind</span><span class="chip">🌦️ /weather</span><span class="chip">📖 /define</span><span class="chip">🎂 /birthday</span>
+            <span class="chip">🤖 /ai ask</span><span class="chip">💬 /ai chat</span><span class="chip">📝 /ai summarize</span><span class="chip">🌍 /ai translate</span><span class="chip">🔎 /ai search</span><span class="chip">🎨 /ai imagine</span><span class="chip">🧑‍💻 /ai review</span><span class="chip">🎭 /aiconfig persona</span><span class="chip">⏰ /remind</span><span class="chip">🌦️ /weather</span><span class="chip">📖 /define</span><span class="chip">🎂 /birthday</span>
           </div>
         </div>
         <div class="marquee rev reveal" aria-hidden="true">
           <div class="mq-track">
-            <span class="chip alt">♟️ /chess</span><span class="chip alt">🟩 /wordle</span><span class="chip alt">🪢 /hangman</span><span class="chip alt">🧠 /trivia</span><span class="chip alt">🃏 /blackjack</span><span class="chip alt">🔴 /connect4</span><span class="chip alt">🚢 /battleship</span><span class="chip alt">🧮 /2048</span><span class="chip alt">🐍 /snake</span><span class="chip alt">🕵️ /mystery</span><span class="chip alt">🗡️ /rpg</span><span class="chip alt">👤 /profile</span><span class="chip alt">🏆 /leaderboard</span><span class="chip alt">🪙 /daily</span>
+            <span class="chip alt">♟️ /chess</span><span class="chip alt">🟩 /wordle</span><span class="chip alt">🪢 /game hangman</span><span class="chip alt">🧠 /game trivia</span><span class="chip alt">🃏 /casino blackjack</span><span class="chip alt">🔴 /versus connect4</span><span class="chip alt">🚢 /versus battleship</span><span class="chip alt">🧮 /game 2048</span><span class="chip alt">🐍 /game snake</span><span class="chip alt">🕵️ /aigame mystery</span><span class="chip alt">🗡️ /aigame rpg</span><span class="chip alt">👤 /profile</span><span class="chip alt">🏆 /leaderboard</span><span class="chip alt">🪙 /daily</span>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="community">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Community &amp; learning</span>
+          <h2>Make more of your time together</h2>
+          <p>New ways to play, learn and shape your server. Find the exact options with <code>/help command:</code>.</p>
+        </div>
+        <div class="features">
+          <article class="card feature reveal"><span class="icon" aria-hidden="true">🎯</span><h3>A reason to come back</h3><p>Complete daily and weekly <code>/quests</code> through games, daily Wordle, pet care and study. Spend coins on <code>/profile cosmetics</code>: themes, titles, pet accessories and board styles.</p></article>
+          <article class="card feature reveal"><span class="icon" aria-hidden="true">💡</span><h3>Make the server yours</h3><p>Use <code>/suggest</code> to propose ideas and vote. Staff can respond and track decisions. Save reusable server answers with <code>/tag</code>, without spending AI requests.</p></article>
+          <article class="card feature reveal"><span class="icon" aria-hidden="true">📅</span><h3>Opt into game night</h3><p>Staff schedule <code>/event</code> activities; subscribe for a DM 15 minutes before they start. Unsubscribe whenever you like. Reminders require open DMs and current channel access.</p></article>
+          <article class="card feature reveal"><span class="icon" aria-hidden="true">🏆</span><h3>Find your next opponent</h3><p>Join <code>/queue</code> for chess, Connect Four or Tic-Tac-Toe in your channel. Run a <code>/tournament</code> with brackets, round deadlines and prizes funded from the host’s coins.</p></article>
+          <article class="card feature reveal"><span class="icon" aria-hidden="true">📚</span><h3>Study at your own pace</h3><p>Build private <code>/study</code> decks or draft cards from notes and PDFs. Edit AI answers, reveal a card and grade your recall to schedule the next review.</p></article>
+          <article class="card feature reveal"><span class="icon" aria-hidden="true">🔖</span><h3>Keep useful things private</h3><p>Save message links and labels with <code>/bookmark</code>. Use <code>/privacy</code> for a private data export or confirmed deletion and collection pause. See the privacy policy for exclusions.</p></article>
+          <article class="card feature reveal"><span class="icon" aria-hidden="true">🧠</span><h3>AI with server controls</h3><p>Staff can set daily request limits and token thresholds with <code>/aiconfig limits</code>. Schedule <code>/aiconfig digest</code> summaries in public source channels, with message links and no cross-channel reposting.</p></article>
+          <article class="card feature reveal"><span class="icon" aria-hidden="true">✨</span><h3>More ways to play</h3><p>Enable optional reaction GIFs with <code>/config actgifs</code>. The owner can opt into NYT daily Wordle when the official feed permits access; outages use a labelled local puzzle for the entire day.</p></article>
         </div>
       </div>
     </section>
@@ -161,7 +181,7 @@
           <button class="flip reveal" type="button" aria-label="Blackjack: show details" style="--d:80ms">
             <span class="flip-in">
               <span class="face front"><img src="assets/blackjack.png" alt="A blackjack table" width="480" height="374" loading="lazy"><span class="flip-label"><b>🃏 Blackjack</b><span class="turn" aria-hidden="true">↻</span></span></span>
-              <span class="face back"><b>🃏 Blackjack</b><span class="cmdline">/blackjack bet</span><span class="li">Hit, stand or double down</span><span class="li">Natural blackjack pays 2.5×</span><span class="li">Plus coinflip, dice and slots</span></span>
+              <span class="face back"><b>🃏 Blackjack</b><span class="cmdline">/casino blackjack bet</span><span class="li">Hit, stand or double down</span><span class="li">Natural blackjack pays 2.5×</span><span class="li">Plus coinflip, dice and slots</span></span>
             </span>
           </button>
           <button class="flip reveal" type="button" aria-label="Wordle: show details" style="--d:160ms">
@@ -173,19 +193,19 @@
           <button class="flip reveal" type="button" aria-label="Connect Four: show details">
             <span class="flip-in">
               <span class="face front"><img src="assets/connect4.png" alt="A Connect Four board" width="420" height="397" loading="lazy"><span class="flip-label"><b>🔴 Connect Four</b><span class="turn" aria-hidden="true">↻</span></span></span>
-              <span class="face back"><b>🔴 Connect Four</b><span class="cmdline">/connect4 [opponent]</span><span class="li">Drop discs with buttons</span><span class="li">The winning four light up</span><span class="li">Play a friend or the bot</span></span>
+              <span class="face back"><b>🔴 Connect Four</b><span class="cmdline">/versus connect4 [opponent]</span><span class="li">Drop discs with buttons</span><span class="li">The winning four light up</span><span class="li">Play a friend or the bot</span></span>
             </span>
           </button>
           <button class="flip reveal" type="button" aria-label="Battleship: show details" style="--d:80ms">
             <span class="flip-in">
               <span class="face front"><img src="assets/battleship.png" alt="Two battleship grids with hits and misses" width="560" height="289" loading="lazy"><span class="flip-label"><b>🚢 Battleship</b><span class="turn" aria-hidden="true">↻</span></span></span>
-              <span class="face back"><b>🚢 Battleship</b><span class="cmdline">/battleship [opponent]</span><span class="li">Type a square like B4 in chat to fire</span><span class="li">Hits give you another shot</span><span class="li">Check your own fleet privately</span></span>
+              <span class="face back"><b>🚢 Battleship</b><span class="cmdline">/versus battleship [opponent]</span><span class="li">Type a square like B4 in chat to fire</span><span class="li">Hits give you another shot</span><span class="li">Check your own fleet privately</span></span>
             </span>
           </button>
           <button class="flip reveal" type="button" aria-label="2048: show details" style="--d:160ms">
             <span class="flip-in">
               <span class="face front"><img src="assets/2048.png" alt="A 2048 board" width="420" height="420" loading="lazy"><span class="flip-label"><b>🧮 2048</b><span class="turn" aria-hidden="true">↻</span></span></span>
-              <span class="face back"><b>🧮 2048</b><span class="cmdline">/2048</span><span class="li">Slide with the arrow buttons</span><span class="li">Tiles in the original colors</span><span class="li">Chase the server high score</span></span>
+              <span class="face back"><b>🧮 2048</b><span class="cmdline">/game 2048</span><span class="li">Slide with the arrow buttons</span><span class="li">Tiles in the original colors</span><span class="li">Chase the server high score</span></span>
             </span>
           </button>
         </div>
@@ -230,9 +250,9 @@
         <div class="timeline">
           <span class="tl-track" aria-hidden="true"></span><span class="tl-fill" aria-hidden="true"></span>
           <div class="tl-step"><span class="tl-dot">1</span><b>Add the bot</b><p>Click <strong>Add to Discord</strong> and pick your server. You need the Manage Server permission.</p></div>
-          <div class="tl-step"><span class="tl-dot">2</span><b>Say hi</b><p>Mention <code>@<span data-site="botName">Muninn</span></code> in any channel, or use <code>/ask</code>.</p></div>
+          <div class="tl-step"><span class="tl-dot">2</span><b>Say hi</b><p>Mention <code>@<span data-site="botName">Muninn</span></code> in any channel, or use <code>/ai ask</code>.</p></div>
           <div class="tl-step"><span class="tl-dot">3</span><b>Explore</b><p>Type <code>/help</code> to browse every command by category.</p></div>
-          <div class="tl-step"><span class="tl-dot">4</span><b>Make it yours</b><p>Use <code>/config</code> for welcome messages, logs, level roles and automod, and <code>/persona</code> to give the AI a personality.</p></div>
+          <div class="tl-step"><span class="tl-dot">4</span><b>Make it yours</b><p>Use <code>/config</code> for welcome messages, logs, level roles and automod, and <code>/aiconfig persona</code> to give the AI a personality.</p></div>
         </div>
       </div>
     </section>
@@ -243,7 +263,7 @@
         <div class="faq-side reveal">
           <span class="eyebrow">FAQ</span>
           <h2>Questions?</h2>
-          <p>Can't find your answer? Email <a data-mailto href="#">us</a>.</p>
+          <p>Can't find your answer? Use <code>/feedback</code> in Discord to reach the developer.</p>
           <div class="card faq-cta">
             <b>Ready to try it?</b>
             <p>It's free, and it takes seconds.</p>
@@ -251,12 +271,12 @@
           </div>
         </div>
         <div class="faq-list reveal">
-          <div class="qa"><button type="button" aria-expanded="false">Is Muninn free?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>Yes. Every feature is free to use. A few picture features (<code>/imagine</code>, story illustrations and <code>/guessprompt</code>) need a paid AI plan on the bot's side, so they may be switched off.</p></div></div></div>
-          <div class="qa"><button type="button" aria-expanded="false">What data does the bot keep?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>Only what features need: recent AI chat messages (clear them with <code>/reset</code>), levels, coins, game stats and server settings. We never sell data. The <a href="privacy.html">Privacy Policy</a> has the full list and how to delete it.</p></div></div></div>
-          <div class="qa"><button type="button" aria-expanded="false">How do I stop the AI replying in a channel?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>Use <code>/disablechat channel:</code> on that channel. Run it again to turn AI chat back on. <code>/disablenotif</code> does the same for level-up messages.</p></div></div></div>
-          <div class="qa"><button type="button" aria-expanded="false">Can I change the AI's personality?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>Yes. <code>/persona set</code> turns it into anything from "a grumpy pirate" to "a patient math teacher" for your server. <code>/persona clear</code> goes back to normal.</p></div></div></div>
+          <div class="qa"><button type="button" aria-expanded="false">Is Muninn free?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>Yes. There is no subscription charge from the bot. AI features depend on the operator’s configured quotas and available API access. A few picture features (<code>/ai imagine</code>, story illustrations and <code>/aigame guessprompt</code>) need a paid AI plan on the bot's side, so they may be switched off.</p></div></div></div>
+          <div class="qa"><button type="button" aria-expanded="false">What data does the bot keep?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>Only what features need: recent AI chat messages (clear them with <code>/ai reset</code>), levels, coins, game stats, study cards, bookmarks and server settings. Use <code>/privacy export</code> or <code>/privacy delete</code> for your attributable records. We never sell data. The <a href="privacy.html">Privacy Policy</a> has the full list and how to delete it.</p></div></div></div>
+          <div class="qa"><button type="button" aria-expanded="false">How do I stop the AI replying in a channel?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>Use <code>/aiconfig disablechat channel:</code> on that channel. Run it again to turn AI chat back on. <code>/config disablenotif</code> does the same for level-up messages.</p></div></div></div>
+          <div class="qa"><button type="button" aria-expanded="false">Can I change the AI's personality?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>Yes. <code>/aiconfig persona set</code> turns it into anything from "a grumpy pirate" to "a patient math teacher" for that channel. <code>/aiconfig persona clear</code> goes back to normal.</p></div></div></div>
           <div class="qa"><button type="button" aria-expanded="false">Do I have to click buttons to play?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>No. In Wordle, chess and Battleship you can type your guess or move in chat, like <code>crane</code>, <code>Nf3</code> or <code>B4</code>. Only your own moves count, and the rest of the chat is left alone. When the game ends, your typed moves are cleaned up, since the board picture already shows them. The buttons still work too.</p></div></div></div>
-          <div class="qa"><button type="button" aria-expanded="false">How strong is the chess bot?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>It runs Stockfish at five levels, from Easy (about 250 Elo) to Grandmaster (about 2600). The ratings are approximate. Games between members can be rated, and ratings show on <code>/profile</code> and <code>/leaderboard</code>.</p></div></div></div>
+          <div class="qa"><button type="button" aria-expanded="false">How strong is the chess bot?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>It runs Stockfish at five levels, from Easy (about 250 Elo) to Grandmaster (about 2600). The ratings are approximate. Games between members can be rated, and ratings show on <code>/profile view</code> and <code>/leaderboard</code>.</p></div></div></div>
           <div class="qa"><button type="button" aria-expanded="false">Are coins worth real money?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>No. Coins, items and levels are just for fun and can't be bought or cashed out. The casino games only use these virtual coins.</p></div></div></div>
         </div>
       </div>
@@ -279,7 +299,7 @@
   <footer>
     <div class="container">
       <p>© <span data-year>2026</span> <span data-site="botName">Muninn</span> · made by <span data-site="developer">Odin</span></p>
-      <nav aria-label="Footer"><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a><a data-mailto="link" href="#">Contact</a></nav>
+      <nav aria-label="Footer"><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a><a data-contact="link" href="#">Contact</a></nav>
     </div>
   </footer>
 </body>
